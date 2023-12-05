@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const colors = require('tailwindcss/colors')
 
 const config: Config = {
   content: [
@@ -15,8 +16,11 @@ const config: Config = {
       },
     },
     colors: {
+      ...colors,
       background: 'hsl(218, 83%, 7%)',
       primary: '#235B62',
+      blackgradient: 'rgba(27, 29, 32, 1)',
+      jumbotron: 'rgba(12, 26, 49, 0.5)',
     }
   },
   plugins: [],
