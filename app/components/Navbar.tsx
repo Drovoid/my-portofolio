@@ -36,7 +36,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const navbarClass = `${showNav ? "z-50": "-top-52"} w-full justify-between py-6 fixed top-0 flex px-[3.8rem] transition-all ease-in duration-300 ${showBackground ? 'jumbotron' : 'bg-none'}`;
+  const navbarClass = `${showNav ? "z-50 top-0": "-top-52"} w-full justify-between py-6 fixed flex px-[3.8rem] transition-all ease-in duration-300 ${showBackground ? 'jumbotron' : 'bg-none'}`;
 
   return (
     <div className={navbarClass}>
