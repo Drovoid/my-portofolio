@@ -37,31 +37,43 @@ const Project = () => {
           slidesPerView={3}
           spaceBetween={30}
           freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
           modules={[FreeMode, Pagination]}
-          className="mySwiper"
         >
           <SwiperSlide>
-            <Image className="rounded-lg" src="ssw1.svg" width={600} height={600} alt="SSW Project" />
+            <Image
+              className="rounded-lg"
+              src="ssw1.svg"
+              width={400}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="SSW Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image className="rounded-lg" src="ssw2.svg" width={600} height={600} alt="SSW Project" />
+            <Image
+              className="rounded-lg"
+              src="ssw2.svg"
+              width={400}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="SSW Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image className="rounded-lg" src="ssw3.svg" width={600} height={600} alt="SSW Project" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image className="rounded-lg" src="ssw4.svg" width={600} height={600} alt="SSW Project" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image className="rounded-lg" src="ssw5.svg" width={600} height={600} alt="SSW Project" />
+            <Image
+              className="rounded-lg"
+              src="ssw3.svg"
+              width={400}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="SSW Project"
+            />
           </SwiperSlide>
         </Swiper>
         <div className="flex gap-10 my-auto">
           <a
-            href=""
+            href="https://smartsinergyworld.com/"
+            target="_blank"
             className="btn-demo3 flex w-[321px] py-8 justify-center gap-5"
           >
             <div className="text-4xl font-bold my-auto">Live Demo</div>
@@ -69,7 +81,7 @@ const Project = () => {
               <Image src="demo.svg" width={30} height={30} alt="arrow" />
             </div>
           </a>
-          <div className="flex flex-col">
+          <a href="#" className="flex flex-col">
             <div className="text-3xl text-[#919DC1] font-bold">
               Source Code & Documentation
             </div>
@@ -82,7 +94,7 @@ const Project = () => {
                 github.com
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div className="text-3xl font-semibold">Featured technologies used</div>
         <div className="container flex flex-row gap-7">

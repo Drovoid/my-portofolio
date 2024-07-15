@@ -46,7 +46,7 @@ const Navbar = () => {
           href="#"
           className="nav-link mx-5 font-semibold hover:text-primary hover:cursor-pointer p-3"
         >
-          Home
+          Homes
         </a>
         <a
           href="#skill"
