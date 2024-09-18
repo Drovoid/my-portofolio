@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "next/image";
+import DotPattern from "./magicui/dot-pattern";
+import { cn } from "@/lib/utils";
 
 const Overview = () => {
   return (
-    <div className="">
+    <>
       <div className="flex px-20 mt-52 relative w-full mb-8 h-full">
+        <DotPattern
+          className={cn(
+            "absolute inset-x-0 top-0 h-[calc(100%+300px)] -mt-52", // Sesuaikan nilai -mt-20 dengan tinggi navbar Anda
+            "[mask-image:radial-gradient(900px_circle_at_center,white,transparent)]"
+          )}
+        />
         <div className="-z-5 absolute min-w-full right-4 -top-24">
           <Image
             className="m-auto"
@@ -14,7 +22,6 @@ const Overview = () => {
             alt="Fikri"
           />
         </div>
-
         <div className="container space-y-10">
           <h3 className="opacity-50 text-4xl">Front-End Developer</h3>
           <h1 className="font-bold text-6xl pb-7 relative">
@@ -74,7 +81,7 @@ const Overview = () => {
         <Image src="dribbble.svg" width={290} height={86} alt="dribbble" />
         <Image src="fiverr.svg" width={290} height={86} alt="fiverr" />
       </div>
-    </div>
+    </>
   );
 };
 
