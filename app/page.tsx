@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="bg-background relative">
+    <div  >
       <Overview />
       <Skill />
       <Project />

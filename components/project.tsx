@@ -2,246 +2,148 @@
 
 import Image from "next/image";
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import './styles.css';
-
-// import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Project = () => {
   return (
-    <div id="project" className="px-20 mt-32">
-      <div className="heading flex gap-5 justify-end">
-        <Image src="project.svg" width={100} height={100} alt="facebook" />
-        <h1 className="font-bold text-5xl my-auto">
-          Highlighted Projects <span className="text-2xl">i’ve done</span>
+    <div
+      id="project"
+      className="px-4 sm:px-8 md:px-16 lg:px-20 mt-16 sm:mt-24 md:mt-32"
+    >
+      <div className="heading flex flex-col sm:flex-row gap-3 sm:gap-5 items-center sm:items-end sm:justify-end mb-8">
+        <Image
+          src="project.svg"
+          width={80}
+          height={80}
+          alt="Project"
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
+        />
+        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center sm:text-left">
+          Highlighted Projects{" "}
+          <span className="text-xl sm:text-2xl block sm:inline">i&apos;ve done</span>
         </h1>
       </div>
-      <div className="project3 px-20 py-16 mt-14 space-y-12">
-        <div className="font-bold text-6xl text-yellow-500">
-          SSW Company Profile
-        </div>
-        <div className="text-xl leading-7">
-          Smart Sinergy World (SSW) company profile website is a comprehensive
-          online platform designed to provide a clear and detailed insight into
-          the community. It offers an overview of SSW, explains its business
-          model, showcases seminar activities, and highlights available products
-        </div>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          freeMode={true}
-          modules={[FreeMode, Pagination]}
+      {[
+        {
+          title: "SSW Company Profile",
+          color: "text-yellow-500",
+          description:
+            "Smart Sinergy World (SSW) company profile website is a comprehensive online platform designed to provide a clear and detailed insight into the community. It offers an overview of SSW, explains its business model, showcases seminar activities, and highlights available products",
+          images: ["ssw1.svg", "ssw2.svg", "ssw3.svg"],
+          demoLink: "https://smartsinergyworld.com/",
+          btnClass: "btn-demo3",
+          technologies: ["next", "tailwind", "vercel"],
+        },
+        {
+          title: "Kidsera Dashboard",
+          color: "text-blue-600",
+          description:
+            "Kidsera Dashboard is an information system for teachers at kidsera kindegarten which has the function of processing data starting from facilities & infrastructure to every detail of student data packaged with an easy-to-understand user experience and a modern user interface",
+          images: ["sera1.svg"],
+          demoLink: "",
+          btnClass: "btn-demo2",
+          technologies: ["ionic", "vue", "bootstrap", "flask"],
+        },
+      ].map((project, index) => (
+        <div
+          key={index}
+          className={`project${
+            index + 2
+          } px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16 mt-8 sm:mt-12 md:mt-14 space-y-6 sm:space-y-8 md:space-y-12`}
         >
-          <SwiperSlide>
-            <Image
-              className="rounded-lg"
-              src="ssw1.svg"
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              alt="SSW Project"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="rounded-lg"
-              src="ssw2.svg"
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              alt="SSW Project"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              className="rounded-lg"
-              src="ssw3.svg"
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              alt="SSW Project"
-            />
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex gap-10 my-auto">
-          <a
-            href="https://smartsinergyworld.com/"
-            target="_blank"
-            className="btn-demo3 flex w-[321px] py-8 justify-center gap-5"
+          <div
+            className={`font-bold text-4xl sm:text-5xl md:text-6xl ${project.color}`}
           >
-            <div className="text-4xl font-bold my-auto">Live Demo</div>
-            <div className="box-arrow2 p-4">
-              <Image src="demo.svg" width={30} height={30} alt="arrow" />
-            </div>
-          </a>
-          <a href="#" className="flex flex-col">
-            <div className="text-3xl text-[#919DC1] font-bold">
-              Source Code & Documentation
-            </div>
-            <div className="flex flex-row my-auto gap-3">
-              <div className="text-3xl text-black font-semibold my-auto">
-                On
-              </div>
-              <Image src="mygithub.svg" width={50} height={50} alt="Github" />
-              <div className="text-3xl text-black font-semibold my-auto">
-                github.com
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="text-3xl font-semibold">Featured technologies used</div>
-        <div className="container flex flex-row gap-7">
-          <Image src="origin/next.svg" width={80} height={80} alt="Next" />
-          <Image
-            src="origin/tailwind.svg"
-            width={80}
-            height={80}
-            alt="Tailwind"
-          />
-          <Image src="origin/vercel.svg" width={80} height={80} alt="Vercel" />
-        </div>
-      </div>
-      <div className="project1 px-20 py-16 mt-14 space-y-12">
-        <div className="font-bold text-6xl text-blue-600">
-          Sea<span className="text-black">nema</span>
-        </div>
-        <div className="text-xl leading-7">
-          Sea - cinema is web application that allows users to book movie
-          tickets online. It provides a user-friendly interface for browsing
-          movies, selecting seats, and making payments.
-        </div>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Image src="sea1.svg" width={600} height={600} alt="Sea Project" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src="sea2.svg" width={600} height={600} alt="Sea Project" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src="sea3.svg" width={600} height={600} alt="Sea Project" />
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex gap-10 my-auto">
-          <a
-            href=""
-            className="btn-demo1 flex w-[321px] py-8 justify-center gap-5"
+            {project.title}
+          </div>
+          <div className="text-base sm:text-lg md:text-xl leading-relaxed">
+            {project.description}
+          </div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            freeMode={true}
+            pagination={{ clickable: true }}
+            modules={[FreeMode, Pagination]}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="mySwiper"
           >
-            <div className="text-4xl font-bold my-auto">Live Demo</div>
-            <div className="box-arrow1 p-4">
-              <Image src="demo.svg" width={30} height={30} alt="arrow" />
-            </div>
-          </a>
-          <div className="flex flex-col">
-            <div className="text-3xl text-[#919DC1] font-bold">
-              Source Code & Documentation
-            </div>
-            <div className="flex flex-row my-auto gap-3">
-              <div className="text-3xl text-black font-semibold my-auto">
-                On
+            {project.images.map((image, imgIndex) => (
+              <SwiperSlide key={imgIndex}>
+                <Image
+                  src={image}
+                  width={600}
+                  height={600}
+                  alt={`${project.title} Project`}
+                  className="rounded-lg w-full h-auto"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${project.btnClass} flex justify-center items-center gap-4 py-4 sm:py-6 px-6 sm:px-8 w-full sm:w-auto`}
+            >
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                Live Demo
               </div>
-              <Image src="mygithub.svg" width={50} height={50} alt="Github" />
-              <div className="text-3xl text-black font-semibold my-auto">
-                github.com
+              <div className="box-arrow2 p-2 sm:p-3">
+                <Image
+                  src="demo.svg"
+                  width={20}
+                  height={20}
+                  alt="arrow"
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
+                />
+              </div>
+            </a>
+            <div className="flex flex-col">
+              <div className="text-xl sm:text-2xl md:text-3xl text-[#919DC1] font-bold">
+                Source Code & Documentation
+              </div>
+              <div className="flex flex-row items-center gap-2 sm:gap-3">
+                <div className="text-xl sm:text-2xl md:text-3xl text-black font-semibold">
+                  On
+                </div>
+                <Image
+                  src="mygithub.svg"
+                  width={40}
+                  height={40}
+                  alt="Github"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                />
+                <div className="text-xl sm:text-2xl md:text-3xl text-black font-semibold">
+                  github.com
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="text-3xl font-semibold">Featured technologies used</div>
-        <div className="container flex flex-row gap-7">
-          <Image src="origin/next.svg" width={80} height={80} alt="Next" />
-          <Image src="origin/prisma.svg" width={80} height={80} alt="Prisma" />
-          <Image
-            src="origin/tailwind.svg"
-            width={80}
-            height={80}
-            alt="Tailwind"
-          />
-          <Image src="origin/vercel.svg" width={80} height={80} alt="Vercel" />
-        </div>
-      </div>
-      <div className="project2 px-20 py-16 mt-14 space-y-12">
-        <div className="font-bold text-6xl text-blue-600">
-          Kidsera Dashboard
-        </div>
-        <div className="text-xl leading-7">
-          Kidsera Dashboard is an information system for teachers at kidsera
-          kindegarten which has the function of processing data starting from
-          facilities & infrastructure to every detail of student data packaged
-          with an easy-to-understand user experience and a modern user interface
-        </div>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Image
-              src="sera1.svg"
-              width={1000}
-              height={1000}
-              alt="Sera Project"
-            />
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex gap-10 my-auto">
-          <a
-            href=""
-            className="btn-demo2 flex w-[321px] py-8 justify-center gap-5"
-          >
-            <div className="text-4xl font-bold my-auto">Live Demo</div>
-            <div className="box-arrow2 p-4">
-              <Image src="demo.svg" width={30} height={30} alt="arrow" />
-            </div>
-          </a>
-          <div className="flex flex-col">
-            <div className="text-3xl text-blue-500 font-bold">
-              Source Code & Documentation
-            </div>
-            <div className="flex flex-row my-auto gap-3">
-              <div className="text-3xl text-black font-semibold my-auto">
-                On
-              </div>
-              <Image src="mygithub.svg" width={50} height={50} alt="Github" />
-              <div className="text-3xl text-black font-semibold my-auto">
-                github.com
-              </div>
-            </div>
+          <div className="text-xl sm:text-2xl md:text-3xl font-semibold">
+            Featured technologies used
+          </div>
+          <div className="flex flex-wrap gap-4 sm:gap-5 md:gap-7">
+            {project.technologies.map((tech, techIndex) => (
+              <Image
+                key={techIndex}
+                src={`origin/${tech}.svg`}
+                width={60}
+                height={60}
+                alt={tech}
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+              />
+            ))}
           </div>
         </div>
-        <div className="text-3xl font-semibold">Featured technologies used</div>
-        <div className="container flex flex-row gap-7">
-          <Image src="origin/ionic.svg" width={80} height={80} alt="Next" />
-          <Image src="origin/vue.svg" width={80} height={80} alt="Prisma" />
-          <Image
-            src="origin/bootstrap.svg"
-            width={80}
-            height={80}
-            alt="Tailwind"
-          />
-          <Image src="origin/flask.svg" width={80} height={80} alt="Vercel" />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

@@ -104,14 +104,14 @@ background-clip: text;
 
 @layer base {
   body {
-    @apply bg-background w-full h-full overflow-x-hidden;
+    @apply w-full h-full overflow-x-hidden;
   }
 
   #__next {
-    @apply h-full w-full bg-background;
+    @apply h-full w-full;
   }
 
   html {
-    @apply bg-background h-full w-full relative;
+    @apply h-full w-full relative;
   }
 }
