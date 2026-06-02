@@ -14,11 +14,8 @@ const Overview = () => {
   const socialLinks = [
     { name: "github", url: "https://github.com/UnFik" },
     { name: "linkedin", url: "https://www.linkedin.com/in/fikri-ilham-arifin-27e/" },
-    { name: "instagram", url: "https://instagram.com/YourUsername" },
-    { name: "facebook", url: "https://facebook.com/YourUsername" },
+    { name: "instagram", url: "https://instagram.com/fikritings" },
   ];
-
-  const brands = ["upwork", "dribbble", "fiverr"];
 
   return (
     <section id="home" className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden pt-20 lg:pt-0">
