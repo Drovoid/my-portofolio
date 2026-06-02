@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils";
 const experiences = [
     {
         company: "Nusapala Berkah Autonomous",
-        role: "Website Developer",
+        role: "Fullstack Developer",
         period: "Sep 2025 - Present",
         type: "Contract",
         location: "Jakarta Timur, Jakarta Raya, Indonesia",
-        description: "Specializing in React.js and Web Development.",
+        description: "Developing desktop and web applications using Wails, React.js, and Golang.",
         skills: ["React.js", "Wails", "Golang", "Docker"],
     },
     {
